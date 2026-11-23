@@ -15,7 +15,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -42,9 +42,9 @@ body {
 }
 
 .hero-photo {
-  margin: 0 0 clamp(32px, 5vh, 52px);
-  width: min(560px, calc(100vw - 48px));
-  max-width: 100%;
+  margin: 0 0 clamp(28px, 4vh, 44px);
+  width: 100%;
+  max-width: 460px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -351,6 +351,8 @@ header, main, footer {
   main { width: min(var(--max), 100% - 36px); }
 
   .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+  .hero-photo { max-width: 280px; }
 
   .song { grid-template-columns: 32px 1fr; gap: 10px; }
 }
