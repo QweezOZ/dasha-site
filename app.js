@@ -102,17 +102,7 @@ function renderPhotos() {
       const holder = document.createElement("div");
       holder.className = "placeholder";
       holder.innerHTML = CAMERA_SVG;
-      const hint = document.createElement("span");
-      hint.textContent = "фото";
-      holder.appendChild(hint);
       frame.appendChild(holder);
-    }
-
-    if (photo.caption) {
-      const cap = document.createElement("figcaption");
-      cap.className = "caption";
-      cap.textContent = photo.caption;
-      frame.appendChild(cap);
     }
 
     grid.appendChild(frame);
