@@ -17,12 +17,16 @@ const CONFIG = {
     { src: "", caption: "просто вы" },
   ],
 
-  songs: [
-    { title: "Название песни", artist: "Исполнитель", note: "почему она про вас" },
-    { title: "Название песни", artist: "Исполнитель", note: "" },
-    { title: "Название песни", artist: "Исполнитель", note: "" },
-    { title: "Название песни", artist: "Исполнитель", note: "" },
-  ],
+  songs: {
+    him: [
+      { title: "Название песни", artist: "Исполнитель", note: "почему она про него" },
+      { title: "Название песни", artist: "Исполнитель", note: "" },
+    ],
+    her: [
+      { title: "Название песни", artist: "Исполнитель", note: "почему она про неё" },
+      { title: "Название песни", artist: "Исполнитель", note: "" },
+    ],
+  },
 
   moments: [
     { when: "12 июля 2026", what: "день, с которого всё началось" },
@@ -109,11 +113,10 @@ function renderPhotos() {
   });
 }
 
-function renderSongs() {
-  const list = document.getElementById("songs-list");
+function renderSongList(list, songs) {
   if (!list) return;
 
-  CONFIG.songs.forEach((song, i) => {
+  songs.forEach((song, i) => {
     const li = document.createElement("li");
     li.className = "song";
 
@@ -146,6 +149,11 @@ function renderSongs() {
   });
 }
 
+function renderSongs() {
+  renderSongList(document.getElementById("songs-him"), CONFIG.songs.him);
+  renderSongList(document.getElementById("songs-her"), CONFIG.songs.her);
+}
+
 function renderTimeline() {
   const list = document.getElementById("timeline");
   if (!list) return;
@@ -171,7 +179,7 @@ function renderStats() {
   if (photos) photos.textContent = CONFIG.photos.length;
 
   const songs = document.getElementById("stat-songs");
-  if (songs) songs.textContent = CONFIG.songs.length;
+  if (songs) songs.textContent = CONFIG.songs.him.length + CONFIG.songs.her.length;
 }
 
 function renderLabel() {
