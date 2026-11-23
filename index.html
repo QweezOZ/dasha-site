@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ыыы Даша поплачь ыыы</title>
+<meta name="description" content="Наша маленькая страница: дни, кадры и песни.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <p class="eyebrow" data-since-label>с 12 июля 2026</p>
+  <h1 class="names">
+    <span class="sigh">ыыы</span>
+    <span>Даша поплачь</span>
+    <span class="sigh">ыыы</span>
+  </h1>
+  <p class="counter">
+    <span id="days" class="counter-num">—</span>
+    <span class="counter-unit">дней вместе</span>
+  </p>
+  <a class="scroll" href="#gallery">дальше <span aria-hidden="true">↓</span></a>
+</header>
+
+<main>
+  <section id="gallery" class="section reveal">
+    <h2>Кадры</h2>
+    <div class="grid" id="gallery-grid"></div>
+  </section>
+
+  <section id="songs" class="section reveal">
+    <h2>Песни</h2>
+    <ol class="songs" id="songs-list"></ol>
+  </section>
+
+  <section id="moments" class="section reveal">
+    <h2>Моменты</h2>
+    <ul class="timeline" id="timeline"></ul>
+  </section>
+</main>
+
+<footer>
+  <p class="signature">Валера <span class="amp">&amp;</span> Даша</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
