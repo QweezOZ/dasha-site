@@ -115,6 +115,13 @@ body {
   color: var(--muted);
 }
 
+.counter-sub {
+  margin: 12px 0 0;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
 .scroll {
   position: absolute;
   bottom: 5vh;
