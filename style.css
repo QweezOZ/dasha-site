@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    Р’Р°Р»РµСЂР° & Р”Р°С€Р° вЂ” РјРёРЅРёРјР°Р»РёР·Рј: С‚РѕР»СЊРєРѕ С‚РµРєСЃС‚, РІРѕР·РґСѓС… Рё РѕРґРёРЅ Р°РєС†РµРЅС‚
    ============================================================ */
 
@@ -311,16 +311,16 @@ footer {
   html { scroll-behavior: auto; }
 }
 
-/* ---------- С„РѕРЅ: РїР»РёС‚РєР° ---------- */
+/* ---------- фон: шахматный тайл ---------- */
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("img/log.jpg");
+  background-image: url("img/bg-tile.jpg");
   background-repeat: repeat;
-  background-size: 170px;
-  opacity: 0.06;
+  background-size: 420px;
+  opacity: 0.07;
   pointer-events: none;
   z-index: 0;
 }
@@ -330,7 +330,7 @@ header, main, footer {
   z-index: 1;
 }
 
-/* ---------- РјРѕР±РёР»РєР° ---------- */
+/* ---------- мобилка ---------- */
 
 @media (max-width: 560px) {
   main { width: min(var(--max), 100% - 36px); }
