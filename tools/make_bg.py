@@ -1,4 +1,4 @@
-"""Собирает шахматный тайл для фона: сахура / Даша.
+"""Собирает шахматный тайл для фона: он / она.
 
 Запуск из папки dasha-site:
     python tools/make_bg.py
@@ -21,14 +21,14 @@ def square(path: str, size: int) -> Image.Image:
 
 
 def main() -> None:
-    log = square(os.path.join(IMG, "log.jpg"), CELL)
+    him = square(os.path.join(IMG, "him.webp"), CELL)
     her = square(os.path.join(IMG, "dasha.webp"), CELL)
 
     tile = Image.new("RGB", (CELL * 2, CELL * 2))
-    tile.paste(log, (0, 0))
+    tile.paste(him, (0, 0))
     tile.paste(her, (CELL, 0))
     tile.paste(her, (0, CELL))
-    tile.paste(log, (CELL, CELL))
+    tile.paste(him, (CELL, CELL))
 
     out = os.path.join(IMG, "bg-tile.jpg")
     tile.save(out, "JPEG", quality=82, optimize=True)
